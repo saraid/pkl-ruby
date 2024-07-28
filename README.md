@@ -1,24 +1,31 @@
-# Pkl::Ruby
+# Pkl
 
-TODO: Delete this and the text below, and describe your gem
-
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/pkl/ruby`. To experiment with that code, run `bin/console` for an interactive prompt.
 
 ## Installation
 
-TODO: Replace `UPDATE_WITH_YOUR_GEM_NAME_IMMEDIATELY_AFTER_RELEASE_TO_RUBYGEMS_ORG` with your gem name right after releasing it to RubyGems.org. Please do not do it earlier due to security reasons. Alternatively, replace this section with instructions to install your gem from git if you don't plan to release to RubyGems.org.
+Too lazy to get my rubygems.org stuff set up again right now.
 
-Install the gem and add to the application's Gemfile by executing:
-
-    $ bundle add UPDATE_WITH_YOUR_GEM_NAME_IMMEDIATELY_AFTER_RELEASE_TO_RUBYGEMS_ORG
-
-If bundler is not being used to manage dependencies, install the gem by executing:
-
-    $ gem install UPDATE_WITH_YOUR_GEM_NAME_IMMEDIATELY_AFTER_RELEASE_TO_RUBYGEMS_ORG
+Make sure that you've installed Pkl and can run `pkl server`.
 
 ## Usage
 
-TODO: Write usage instructions here
+The Pkl server is started up on-demand, and remains open for the duration of the process. It's a child process and should close along with the parent Ruby process, but you can run `Pkl::Server.close!` if you want.
+
+```ruby
+  # Create a new evaluator
+  eva = Pkl::Evaluator.new(options = {})
+
+  # Run it against a moduleUri
+  result = eva.evaluate(moduleUri: "file:///path/to/your/file.pkl")
+
+  # Close the evaluator
+  eva.close!
+
+  # One fell swoop:
+  Pkl::Evaluator.new(options = {}) do
+    evaluate(moduleUri: "file:///path/to/your/file.pkl")
+  end
+```
 
 ## Development
 

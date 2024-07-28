@@ -37,7 +37,7 @@ module Pkl
       end
     end
 
-    class Pkl::Message::ReadResourceResponse < ClientMessage
+    class ReadResourceResponse < ClientMessage
       code 0x27
 
       def initialize(evaluatorId:, contents: nil, error: nil)
@@ -50,7 +50,7 @@ module Pkl
       end
     end
 
-    class Pkl::Message::ReadModuleResponse < ClientMessage
+    class ReadModuleResponse < ClientMessage
       code 0x29
 
       def initialize(evaluatorId:, contents: nil, error: nil)
@@ -63,7 +63,7 @@ module Pkl
       end
     end
 
-    class Pkl::Message::ListResourcesResponse < ClientMessage
+    class ListResourcesResponse < ClientMessage
       code 0x2b
 
       def initialize(evaluatorId:, pathElements: nil, error: nil)
@@ -76,7 +76,7 @@ module Pkl
       end
     end
 
-    class Pkl::Message::ListModulesResponse < ClientMessage
+    class ListModulesResponse < ClientMessage
       code 0x2d
 
       def initialize(evaluatorId:, pathElements: nil, error: nil)

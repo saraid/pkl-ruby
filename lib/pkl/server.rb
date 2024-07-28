@@ -3,6 +3,7 @@ require 'msgpack'
 module Pkl
   class Server
     def self.instance
+      @instance = nil if @instance&.closed?
       @instance ||= new
     end
 
@@ -13,5 +14,8 @@ module Pkl
 
     def write(binary) = @io.write(binary)
     def read = @unpacker.next.then { Message::ServerMessage.parse(_1) }
+
+    def close! = @io.close
+    def closed? = @io.closed?
   end
 end

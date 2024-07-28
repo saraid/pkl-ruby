@@ -45,22 +45,22 @@ module Pkl
       parse_properties :evaluatorId, :level, :message, :frameUri
     end
 
-    class Pkl::Message::ReadResourceRequest < ServerMessage
+    class ReadResourceRequest < ServerMessage
       code 0x26
       parse_properties :evaluatorId, :uri
     end
 
-    class Pkl::Message::ReadModuleRequest < ServerMessage
+    class ReadModuleRequest < ServerMessage
       code 0x28
       parse_properties :evaluatorId, :uri
     end
 
-    class Pkl::Message::ListResourcesRequest < ServerMessage
+    class ListResourcesRequest < ServerMessage
       code 0x2a
       parse_properties :evaluatorId, :uri
     end
 
-    class Pkl::Message::ListModulesRequest < ServerMessage
+    class ListModulesRequest < ServerMessage
       code 0x2c
       parse_properties :evaluatorId, :uri
     end
