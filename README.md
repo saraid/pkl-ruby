@@ -1,5 +1,12 @@
 # Pkl
 
+This is a Ruby implementation of the [Language Binding Specification](https://pkl-lang.org/main/current/bindings-specification/index.html) for Pkl. As recommended, it spins up a child process using the CLI and uses stdin/stdout over MessagePack to communicate.
+
+Currently, my testing has not encountered cases where the following messages were received, so they remain unimplemented:
+- ReadResource{Request|Response}
+- ReadModule{Request|Response}
+- ListResources{Request|Response}
+- ListModules{Request|Response}
 
 ## Installation
 
