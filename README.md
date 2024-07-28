@@ -12,7 +12,7 @@ Currently, my testing has not encountered cases where the following messages wer
 
 Too lazy to get my rubygems.org stuff set up again right now.
 
-Make sure that you've installed Pkl and can run `pkl server`.
+Make sure that you've [installed Pkl](https://pkl-lang.org/main/current/pkl-cli/index.html#installation) and can run `pkl server`.
 
 ## Usage
 
