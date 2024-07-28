@@ -1,0 +1,7 @@
+name = "Common wood pigeon"
+lifespan = 8
+friends {
+  ["bird1"] = "Parrot"
+  ["bird2"] = "Albatross"
+  ["bird3"] = "Falcon"
+}
