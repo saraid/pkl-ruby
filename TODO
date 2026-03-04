@@ -1,0 +1,4 @@
+- Tests, maybe?
+- I should burn out the remnants of bundle gem being annoying. And maybe actually learn bundle gem...
+- Might be cool to start using RBS.
+- Maybe collapse the BinaryFormat types down into more typical Ruby shenanigans. Map/Mapping -> Hash, Duration -> AS::Duration? Dunno if this is a good idea since stuff like IntSeq and Pair don't map cleanly. BinaryFormat still feels like a stupid namespace name, though.
